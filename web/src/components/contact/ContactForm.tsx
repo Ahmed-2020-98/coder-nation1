@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/Button";
@@ -30,6 +30,11 @@ export function ContactForm({ services, defaultService }: { services: Service[];
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
   const budgets = t.raw("budgets") as string[];
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "success") successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [status]);
 
   const {
     register,
@@ -65,7 +70,7 @@ export function ContactForm({ services, defaultService }: { services: Service[];
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-start gap-6 rounded-3xl border border-line bg-elevated p-10" role="status">
+      <div ref={successRef} className="flex flex-col items-start gap-6 rounded-3xl border border-line bg-elevated p-10" role="status">
         <CheckCircle2 className="size-12 text-emerald-500" strokeWidth={1.5} />
         <p className="font-display text-3xl text-ink rtl:font-semibold">{t("success")}</p>
         <Button variant="outline" onClick={() => setStatus("idle")}>
