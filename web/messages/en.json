@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "Coder Nation — Web Design, Development & Mobile Apps",
+    "description": "Coder Nation is a digital studio crafting websites and mobile apps. We turn ideas into elegant, fast digital products that grow your business."
+  },
+  "brand": { "name": "Coder Nation" },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content"
+  },
+  "theme": { "toggle": "Toggle theme", "light": "Light", "dark": "Dark" },
+  "locale": { "switch": "العربية", "label": "Change language" },
+  "hero": {
+    "eyebrow": "Digital studio · Web & Mobile",
+    "title": "We build digital products",
+    "titleAccent": "worthy of your ambition",
+    "subtitle": "We design and engineer websites and mobile apps with precision and taste — fast, elegant, and built to grow with you.",
+    "primary": "Start a project",
+    "secondary": "See our work",
+    "badge": "Available for new projects",
+    "scroll": "Scroll"
+  },
+  "stats": {
+    "projects": "Projects shipped",
+    "clients": "Happy clients",
+    "years": "Years of craft",
+    "satisfaction": "Client satisfaction"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Everything you need to launch",
+    "subtitle": "From idea to launch, one team handles design and engineering to world-class standards.",
+    "learnMore": "Learn more",
+    "all": "All services",
+    "features": "What's included",
+    "related": "Work in this service",
+    "ctaTitle": "Ready to start?",
+    "ctaText": "Tell us about your project and we'll come back with a clear plan and quote within 24 hours.",
+    "pageTitle": "Services built to grow your business",
+    "pageSubtitle": "We combine thoughtful design with meticulous engineering to build digital products that perform and leave an impression."
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "A clear process from day one",
+    "steps": [
+      { "title": "Discover", "text": "We learn your goals, audience and competitors, and define the scope precisely." },
+      { "title": "Design", "text": "We map the user experience and craft interfaces that express your brand." },
+      { "title": "Develop", "text": "We build with clean code and modern technology, testing every stage." },
+      { "title": "Launch & grow", "text": "We ship, monitor performance and keep improving with you after launch." }
+    ]
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Projects we're proud of",
+    "subtitle": "A selection of products we've designed and built for clients across industries.",
+    "viewAll": "All work",
+    "view": "View project",
+    "filters": { "all": "All", "web": "Websites", "mobile": "Apps" },
+    "categories": { "web": "Website", "mobile": "Mobile app" },
+    "client": "Client",
+    "year": "Year",
+    "category": "Type",
+    "stack": "Stack",
+    "visit": "Visit project",
+    "back": "All work",
+    "next": "Next project",
+    "empty": "No projects in this category yet.",
+    "pageTitle": "Our work",
+    "pageSubtitle": "Real products, for real clients, with measurable results."
+  },
+  "why": {
+    "eyebrow": "Why Coder Nation",
+    "title": "A technology partner, not a vendor",
+    "items": [
+      { "title": "Design with identity", "text": "Every interface is crafted for your brand — no off-the-shelf templates." },
+      { "title": "Speed & performance", "text": "Fast-loading websites and apps, optimised for search engines." },
+      { "title": "Full transparency", "text": "A clear plan, fixed milestones and constant updates throughout." },
+      { "title": "Support after launch", "text": "We stay with you after delivery for maintenance and growth." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Trust we're proud of",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "cta": {
+    "title": "Got an idea? Let's turn it into a product.",
+    "text": "Book a free call with our team and let's discuss your project in detail.",
+    "button": "Get in touch",
+    "whatsapp": "Message on WhatsApp"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "A team that believes details make the difference",
+    "intro": "Coder Nation is a digital studio of designers and engineers passionate about building world-class digital products. We started with a simple belief: every business deserves a digital presence worthy of its ambition.",
+    "storyTitle": "Our story",
+    "story": "Over the years we've helped startups and established brands launch websites and apps used by thousands of people every day. We work as an extension of your team: we understand the market, propose solutions, and build to rigorous engineering standards.",
+    "missionTitle": "Mission",
+    "mission": "To make technology a real growth engine for every client, through products that are easy to use, fast and scalable.",
+    "visionTitle": "Vision",
+    "vision": "To be the first-choice technology partner for ambitious companies across the Arab region.",
+    "valuesTitle": "Values",
+    "values": [
+      { "title": "Craft", "text": "We care about every pixel and every line of code." },
+      { "title": "Clarity", "text": "Honest communication and deadlines we keep." },
+      { "title": "Partnership", "text": "Your success is how we measure ours." },
+      { "title": "Growth", "text": "We keep learning and applying the latest technology." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's start your project",
+    "subtitle": "Fill in the form and someone from our team will reach out within 24 hours.",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Phone",
+    "phonePlaceholder": "Optional",
+    "service": "Service",
+    "servicePlaceholder": "Choose a service",
+    "budget": "Estimated budget",
+    "budgetPlaceholder": "Choose a budget",
+    "budgets": ["Under $500", "$500 – $1,500", "$1,500 – $5,000", "Over $5,000"],
+    "message": "Project details",
+    "messagePlaceholder": "Tell us about your idea and goals…",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Message received! We'll be in touch very soon.",
+    "error": "Something went wrong. Please try again or contact us directly.",
+    "throttled": "Too many messages — please try again in a minute.",
+    "errors": {
+      "name": "Please enter your name (at least 2 characters)",
+      "email": "Please enter a valid email",
+      "message": "Please add more detail (at least 10 characters)"
+    },
+    "info": "Contact details",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "hours": "We reply within 24 hours, Sunday to Thursday."
+  },
+  "footer": {
+    "about": "A digital studio crafting websites and mobile apps.",
+    "links": "Links",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "made": "Crafted with care in Cairo"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The link may be broken or the page may have moved.",
+    "back": "Back to home"
+  }
+}

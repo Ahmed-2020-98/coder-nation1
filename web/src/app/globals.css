@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --brand: #1b1e3f;
+  --bg: #f6f5f1;
+  --bg-elevated: #ffffff;
+  --surface: #eeede7;
+  --ink: #1b1e3f;
+  --ink-soft: #3c4166;
+  --muted: #5d6185;
+  --line: #dddbd2;
+  --line-strong: #c4c2b8;
+  --accent: #3a56e8;
+  --accent-soft: #e4e8fd;
+  --on-brand: #f6f5f1;
+  --grid: rgb(27 30 63 / 0.06);
+  --shadow: 0 1px 0 rgb(27 30 63 / 0.04), 0 18px 40px -24px rgb(27 30 63 / 0.25);
+
+  --ff-display: var(--font-display-en), var(--font-display-ar), serif;
+  --ff-body: var(--font-sans-en), var(--font-sans-ar), system-ui, sans-serif;
+}
+
+:root:lang(ar) {
+  --ff-display: var(--font-display-ar), var(--font-display-en), sans-serif;
+  --ff-body: var(--font-sans-ar), var(--font-sans-en), system-ui, sans-serif;
+}
+
+.dark {
+  --bg: #0b0d1f;
+  --bg-elevated: #121531;
+  --surface: #171a3a;
+  --ink: #eef0fa;
+  --ink-soft: #c9cce3;
+  --muted: #9ea3c6;
+  --line: #24284d;
+  --line-strong: #353a68;
+  --accent: #8197ff;
+  --accent-soft: #1d2350;
+  --on-brand: #0b0d1f;
+  --grid: rgb(129 151 255 / 0.07);
+  --shadow: 0 1px 0 rgb(0 0 0 / 0.2), 0 24px 48px -24px rgb(0 0 0 / 0.6);
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-bg: var(--bg);
+  --color-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-brand: var(--on-brand);
+  --font-display: var(--ff-display);
+  --font-sans: var(--ff-body);
+  --font-wordmark: var(--font-wordmark), serif;
+  --shadow-soft: var(--shadow);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--ff-body);
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .container-x {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Blueprint grid used behind hero and feature areas. */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: center top;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 55%, transparent);
+  }
+
+  /* Corner cut echoing the diagonal of the N in the monogram. */
+  .cut-corner {
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+  }
+
+  [dir="rtl"] .cut-corner {
+    clip-path: polygon(28px 0, 100% 0, 100% 100%, 0 100%, 0 28px);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  :lang(ar) .eyebrow {
+    letter-spacing: 0;
+    font-size: 0.875rem;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hairline {
+    border-color: var(--line);
+  }
+
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+[dir="rtl"] .animate-marquee {
+  animation-name: marquee-rtl;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
