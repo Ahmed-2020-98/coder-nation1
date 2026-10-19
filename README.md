@@ -58,6 +58,9 @@ cd dashboard && npm run lint && npm run build
 
 ## النشر
 
+الخطوات الكاملة لـ coder-nation.com (Vercel + Railway) في [`DEPLOY.md`](DEPLOY.md).
+
+
 - `backend`: أي استضافة PHP (MySQL مدعوم — عدّل `DB_*`)، واضبط `APP_URL` و `CORS_ALLOWED_ORIGINS` بدومين الموقع واللوحة.
 - `web`: Vercel أو أي Node host — `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_SITE_URL`.
 - `dashboard`: `API_URL` (يُستخدم من السيرفر فقط), `NEXT_PUBLIC_SITE_URL`.
